@@ -1,0 +1,38 @@
+{
+    "users": [
+      { "id": 1, "name": "Radhika Mehta", "email": "admin@ams.com", "role": "Admin" },
+      { "id": 2, "name": "Arjun Verma", "email": "arjun@ams.com", "role": "Trainer", "assigned_batch_id": 101 },
+      { "id": 3, "name": "Neha Kapoor", "email": "neha@ams.com", "role": "Trainer", "assigned_batch_id": 102 },
+      { "id": 4, "name": "Aman Shah", "email": "aman@student.com", "role": "Student", "assigned_batch_id": 101 },
+      { "id": 5, "name": "Priya Iyer", "email": "priya@student.com", "role": "Student", "assigned_batch_id": 101 },
+      { "id": 6, "name": "Ravi Kulkarni", "email": "ravi@student.com", "role": "Student", "assigned_batch_id": 102 },
+      { "id": 7, "name": "Sneha Joshi", "email": "sneha@student.com", "role": "Student", "assigned_batch_id": 102 }
+    ],
+  
+    "courses": [
+      { "id": 1, "name": "Full Stack Web Dev", "duration": "3 Months" },
+      { "id": 2, "name": "Data Science with Python", "duration": "4 Months" }
+    ],
+  
+    "batches": [
+      { "id": 101, "name": "FS-WD-2025A", "course_id": 1, "trainer_id": 2, "schedule": "Mon-Fri 10AM" },
+      { "id": 102, "name": "DS-PYT-2025B", "course_id": 2, "trainer_id": 3, "schedule": "Mon-Fri 2PM" }
+    ],
+  
+    "attendance": [
+      { "id": 1, "student_id": 4, "batch_id": 101, "date": "2025-06-01", "status": "Present", "marked_by": 2 },
+      { "id": 2, "student_id": 5, "batch_id": 101, "date": "2025-06-01", "status": "Absent", "marked_by": 2 },
+      { "id": 3, "student_id": 4, "batch_id": 101, "date": "2025-06-02", "status": "Present", "marked_by": 2 },
+      { "id": 4, "student_id": 5, "batch_id": 101, "date": "2025-06-02", "status": "Present", "marked_by": 2 },
+      { "id": 5, "student_id": 6, "batch_id": 102, "date": "2025-06-01", "status": "Present", "marked_by": 3 },
+      { "id": 6, "student_id": 7, "batch_id": 102, "date": "2025-06-01", "status": "Late", "marked_by": 3 },
+      { "id": 7, "student_id": 6, "batch_id": 102, "date": "2025-06-02", "status": "Present", "marked_by": 3 },
+      { "id": 8, "student_id": 7, "batch_id": 102, "date": "2025-06-02", "status": "Absent", "marked_by": 3 }
+    ],
+  
+    "leaveRequests": [
+      { "id": 1, "student_id": 5, "date": "2025-06-01", "reason": "Family emergency", "status": "Approved" },
+      { "id": 2, "student_id": 7, "date": "2025-06-02", "reason": "Sick leave", "status": "Pending" }
+    ]
+  }
+  
