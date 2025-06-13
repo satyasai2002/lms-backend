@@ -1,38 +1,334 @@
 {
-    "users": [
-      { "id": 1, "name": "Radhika Mehta", "email": "admin@ams.com", "role": "Admin" },
-      { "id": 2, "name": "Arjun Verma", "email": "arjun@ams.com", "role": "Trainer", "assigned_batch_id": 101 },
-      { "id": 3, "name": "Neha Kapoor", "email": "neha@ams.com", "role": "Trainer", "assigned_batch_id": 102 },
-      { "id": 4, "name": "Aman Shah", "email": "aman@student.com", "role": "Student", "assigned_batch_id": 101 },
-      { "id": 5, "name": "Priya Iyer", "email": "priya@student.com", "role": "Student", "assigned_batch_id": 101 },
-      { "id": 6, "name": "Ravi Kulkarni", "email": "ravi@student.com", "role": "Student", "assigned_batch_id": 102 },
-      { "id": 7, "name": "Sneha Joshi", "email": "sneha@student.com", "role": "Student", "assigned_batch_id": 102 }
-    ],
-  
-    "courses": [
-      { "id": 1, "name": "Full Stack Web Dev", "duration": "3 Months" },
-      { "id": 2, "name": "Data Science with Python", "duration": "4 Months" }
-    ],
-  
-    "batches": [
-      { "id": 101, "name": "FS-WD-2025A", "course_id": 1, "trainer_id": 2, "schedule": "Mon-Fri 10AM" },
-      { "id": 102, "name": "DS-PYT-2025B", "course_id": 2, "trainer_id": 3, "schedule": "Mon-Fri 2PM" }
-    ],
-  
-    "attendance": [
-      { "id": 1, "student_id": 4, "batch_id": 101, "date": "2025-06-01", "status": "Present", "marked_by": 2 },
-      { "id": 2, "student_id": 5, "batch_id": 101, "date": "2025-06-01", "status": "Absent", "marked_by": 2 },
-      { "id": 3, "student_id": 4, "batch_id": 101, "date": "2025-06-02", "status": "Present", "marked_by": 2 },
-      { "id": 4, "student_id": 5, "batch_id": 101, "date": "2025-06-02", "status": "Present", "marked_by": 2 },
-      { "id": 5, "student_id": 6, "batch_id": 102, "date": "2025-06-01", "status": "Present", "marked_by": 3 },
-      { "id": 6, "student_id": 7, "batch_id": 102, "date": "2025-06-01", "status": "Late", "marked_by": 3 },
-      { "id": 7, "student_id": 6, "batch_id": 102, "date": "2025-06-02", "status": "Present", "marked_by": 3 },
-      { "id": 8, "student_id": 7, "batch_id": 102, "date": "2025-06-02", "status": "Absent", "marked_by": 3 }
-    ],
-  
-    "leaveRequests": [
-      { "id": 1, "student_id": 5, "date": "2025-06-01", "reason": "Family emergency", "status": "Approved" },
-      { "id": 2, "student_id": 7, "date": "2025-06-02", "reason": "Sick leave", "status": "Pending" }
-    ]
-  }
-  
+  "batches": [
+    {
+      "batchName": "101",
+      "students": [
+        {
+          "id": "A1",
+          "name": "Angelo Riana",
+          "attendance": { "totalDays": 28, "present": 26, "absent": 1, "halfday": 1 },
+          "todayClasses": [
+            { "subject": "Python", "time": "09:00 AM - 09:45 AM", "status": "Completed" },
+            { "subject": "HTML", "time": "10:00 AM - 10:45 AM", "status": "Completed" }
+          ],
+          "exams": [
+            { "subject": "CSS", "time": "12:15 PM", "date": "06 May 2024" }
+          ],
+          "performance": [
+            { "score": 91, "attendance": 85 }
+          ],
+          "fees": [
+            { "type": "Transport Fees", "amount": 2500, "dueDate": "25 May 2024" }
+          ],
+          "examResult": [
+            { "subject": "HTML", "score": 100 },
+            { "subject": "CSS", "score": 95 }
+          ],
+          "faculties": [
+            { "name": "Aaron", "subject": "Python" },
+            { "name": "Bella", "subject": "SQL" }
+          ],
+          "leaveStatus": [
+            { "type": "Emergency Leave", "date": "15 Jun 2024", "status": "Pending" }
+          ],
+          "syllabus": [
+            { "subject": "SQL", "completed": 100 },
+            { "subject": "Python", "completed": 90 }
+          ],
+          "todo": [
+            { "task": "Send Reminder to Students", "time": "01:00 PM", "status": "Completed" }
+          ]
+        },
+        {
+          "id": "A2",
+          "name": "Meera Paul",
+          "attendance": { "totalDays": 28, "present": 27, "absent": 0, "halfday": 1 },
+          "todayClasses": [
+            { "subject": "Java", "time": "09:00 AM - 09:45 AM", "status": "Completed" },
+            { "subject": "CSS", "time": "11:00 AM - 11:45 AM", "status": "Pending" }
+          ],
+          "exams": [
+            { "subject": "JavaScript", "time": "10:00 AM", "date": "08 May 2024" }
+          ],
+          "performance": [
+            { "score": 88, "attendance": 96 }
+          ],
+          "fees": [
+            { "type": "Exam Fees", "amount": 1200, "dueDate": "26 May 2024" }
+          ],
+          "examResult": [
+            { "subject": "Java", "score": 95 },
+            { "subject": "HTML", "score": 97 }
+          ],
+          "faculties": [
+            { "name": "Helen", "subject": "Java" },
+            { "name": "Morgan", "subject": "CSS" }
+          ],
+          "leaveStatus": [
+            { "type": "Medical Leave", "date": "12 Jun 2024", "status": "Approved" }
+          ],
+          "syllabus": [
+            { "subject": "JavaScript", "completed": 80 },
+            { "subject": "Java", "completed": 95 }
+          ],
+          "todo": [
+            { "task": "Create Routine", "time": "03:00 PM", "status": "In Progress" }
+          ]
+        },
+        {
+          "id": "A3",
+          "name": "Rahul Dev",
+          "attendance": { "totalDays": 28, "present": 25, "absent": 2, "halfday": 1 },
+          "todayClasses": [
+            { "subject": "SQL", "time": "08:30 AM - 09:15 AM", "status": "Completed" },
+            { "subject": "C++", "time": "10:30 AM - 11:15 AM", "status": "Completed" }
+          ],
+          "exams": [
+            { "subject": "C++", "time": "02:00 PM", "date": "09 May 2024" }
+          ],
+          "performance": [
+            { "score": 84, "attendance": 80 }
+          ],
+          "fees": [
+            { "type": "Misc Fees", "amount": 500, "dueDate": "27 May 2024" }
+          ],
+          "examResult": [
+            { "subject": "SQL", "score": 90 },
+            { "subject": "C++", "score": 93 }
+          ],
+          "faculties": [
+            { "name": "Daniel", "subject": "C++" },
+            { "name": "Teresa", "subject": "SQL" }
+          ],
+          "leaveStatus": [
+            { "type": "Fever", "date": "14 Jun 2024", "status": "Pending" }
+          ],
+          "syllabus": [
+            { "subject": "C++", "completed": 85 },
+            { "subject": "SQL", "completed": 90 }
+          ],
+          "todo": [
+            { "task": "Prepare Exam Report", "time": "05:00 PM", "status": "Yet To Start" }
+          ]
+        }
+      ]
+    },
+    {
+      "batchName": "102",
+      "students": [
+        {
+          "id": "B1",
+          "name": "Aisha Khan",
+          "attendance": { "totalDays": 28, "present": 24, "absent": 3, "halfday": 1 },
+          "todayClasses": [
+            { "subject": "JavaScript", "time": "09:00 AM - 09:45 AM", "status": "Completed" },
+            { "subject": "HTML", "time": "11:00 AM - 11:45 AM", "status": "Completed" }
+          ],
+          "exams": [
+            { "subject": "Java", "time": "10:00 AM", "date": "05 May 2024" }
+          ],
+          "performance": [
+            { "score": 79, "attendance": 86 }
+          ],
+          "fees": [
+            { "type": "Transport Fees", "amount": 2500, "dueDate": "25 May 2024" }
+          ],
+          "examResult": [
+            { "subject": "JavaScript", "score": 85 },
+            { "subject": "HTML", "score": 92 }
+          ],
+          "faculties": [
+            { "name": "Bella", "subject": "JavaScript" },
+            { "name": "Helen", "subject": "HTML" }
+          ],
+          "leaveStatus": [
+            { "type": "Medical Leave", "date": "10 Jun 2024", "status": "Approved" }
+          ],
+          "syllabus": [
+            { "subject": "JavaScript", "completed": 88 },
+            { "subject": "HTML", "completed": 92 }
+          ],
+          "todo": [
+            { "task": "Update Homework", "time": "02:00 PM", "status": "Completed" }
+          ]
+        },
+        {
+          "id": "B2",
+          "name": "Sameer Roy",
+          "attendance": { "totalDays": 28, "present": 26, "absent": 2, "halfday": 0 },
+          "todayClasses": [
+            { "subject": "C++", "time": "09:00 AM - 09:45 AM", "status": "Completed" },
+            { "subject": "Python", "time": "11:00 AM - 11:45 AM", "status": "Completed" }
+          ],
+          "exams": [
+            { "subject": "SQL", "time": "01:00 PM", "date": "07 May 2024" }
+          ],
+          "performance": [
+            { "score": 82, "attendance": 93 }
+          ],
+          "fees": [
+            { "type": "Exam Fees", "amount": 1000, "dueDate": "26 May 2024" }
+          ],
+          "examResult": [
+            { "subject": "C++", "score": 88 },
+            { "subject": "Python", "score": 91 }
+          ],
+          "faculties": [
+            { "name": "Daniel", "subject": "C++" },
+            { "name": "Aaron", "subject": "Python" }
+          ],
+          "leaveStatus": [
+            { "type": "Emergency Leave", "date": "13 Jun 2024", "status": "Pending" }
+          ],
+          "syllabus": [
+            { "subject": "C++", "completed": 90 },
+            { "subject": "Python", "completed": 95 }
+          ],
+          "todo": [
+            { "task": "Review Notes", "time": "04:00 PM", "status": "Yet To Start" }
+          ]
+        },
+        {
+          "id": "B3",
+          "name": "Tanya Das",
+          "attendance": { "totalDays": 28, "present": 27, "absent": 1, "halfday": 0 },
+          "todayClasses": [
+            { "subject": "SQL", "time": "10:00 AM - 10:45 AM", "status": "Completed" },
+            { "subject": "JavaScript", "time": "12:00 PM - 12:45 PM", "status": "Completed" }
+          ],
+          "exams": [
+            { "subject": "HTML", "time": "09:00 AM", "date": "06 May 2024" }
+          ],
+          "performance": [
+            { "score": 95, "attendance": 98 }
+          ],
+          "fees": [
+            { "type": "Transport Fees", "amount": 2500, "dueDate": "25 May 2024" }
+          ],
+          "examResult": [
+            { "subject": "SQL", "score": 99 },
+            { "subject": "JavaScript", "score": 95 }
+          ],
+          "faculties": [
+            { "name": "Teresa", "subject": "SQL" },
+            { "name": "Bella", "subject": "JavaScript" }
+          ],
+          "leaveStatus": [
+            { "type": "Fever", "date": "11 Jun 2024", "status": "Approved" }
+          ],
+          "syllabus": [
+            { "subject": "SQL", "completed": 100 },
+            { "subject": "JavaScript", "completed": 90 }
+          ],
+          "todo": [
+            { "task": "Finish Project Report", "time": "06:00 PM", "status": "In Progress" }
+          ]
+        }
+      ]
+    },
+    {
+      "batchName": "103",
+      "students": [
+        {
+          "id": "C1",
+          "name": "Sophia Bennett",
+          "attendance": { "totalDays": 30, "present": 29, "absent": 0, "halfday": 1 },
+          "todayClasses": [
+            { "subject": "JavaScript", "time": "10:00 AM - 10:45 AM", "status": "Completed" }
+          ],
+          "exams": [
+            { "subject": "ReactJS", "time": "01:15 PM", "date": "07 May 2024" }
+          ],
+          "performance": [
+            { "Score": 88, "attendance": 90 }
+          ],
+          "fees": [
+            { "type": "Exam Fees", "amount": 3000, "dueDate": "28 May 2024" }
+          ],
+          "examResult": [
+            { "subject": "JavaScript", "score": 92 }
+          ],
+          "faculties": [
+            { "name": "Daniel", "subject": "ReactJS" },
+            { "name": "Megan", "subject": "JavaScript" }
+          ],
+          "leaveStatus": [
+            { "type": "Medical Leave", "date": "17 Jun 2024", "status": "Approved" }
+          ],
+          "syllabus": [
+            { "subject": "ReactJS", "completed": 90 }
+          ],
+          "todo": [
+            { "task": "Upload Exam Results", "time": "03:00 PM", "status": "In Progress" }
+          ]
+        },
+        {
+          "id": "C2",
+          "name": "Liam Carter",
+          "attendance": { "totalDays": 28, "present": 27, "absent": 1, "halfday": 0 },
+          "todayClasses": [
+            { "subject": "C Programming", "time": "11:00 AM - 11:45 AM", "status": "Completed" }
+          ],
+          "exams": [
+            { "subject": "Data Structures", "time": "02:00 PM", "date": "08 May 2024" }
+          ],
+          "performance": [
+            { "Score": 85, "attendance": 87 }
+          ],
+          "fees": [
+            { "type": "Library Fees", "amount": 1500, "dueDate": "30 May 2024" }
+          ],
+          "examResult": [
+            { "subject": "C Programming", "score": 95 }
+          ],
+          "faculties": [
+            { "name": "Emma", "subject": "C Programming" },
+            { "name": "Chris", "subject": "Data Structures" }
+          ],
+          "leaveStatus": [
+            { "type": "Personal Leave", "date": "18 Jun 2024", "status": "Rejected" }
+          ],
+          "syllabus": [
+            { "subject": "Data Structures", "completed": 85 }
+          ],
+          "todo": [
+            { "task": "Check Attendance Sheet", "time": "11:30 AM", "status": "Pending" }
+          ]
+        },
+        {
+          "id": "C3",
+          "name": "Ava Desai",
+          "attendance": { "totalDays": 27, "present": 26, "absent": 1, "halfday": 0 },
+          "todayClasses": [
+            { "subject": "HTML & CSS", "time": "12:00 PM - 12:45 PM", "status": "Completed" }
+          ],
+          "exams": [
+            { "subject": "JavaScript", "time": "03:00 PM", "date": "09 May 2024" }
+          ],
+          "performance": [
+            { "Score": 89, "attendance": 88 }
+          ],
+          "fees": [
+            { "type": "Hostel Fees", "amount": 5000, "dueDate": "26 May 2024" }
+          ],
+          "examResult": [
+            { "subject": "HTML", "score": 97 }
+          ],
+          "faculties": [
+            { "name": "Nina", "subject": "HTML & CSS" },
+            { "name": "Ethan", "subject": "JavaScript" }
+          ],
+          "leaveStatus": [
+            { "type": "Medical Leave", "date": "16 Jun 2024", "status": "Approved" }
+          ],
+          "syllabus": [
+            { "subject": "HTML & CSS", "completed": 100 }
+          ],
+          "todo": [
+            { "task": "Prepare Notes for JS Class", "time": "12:00 PM", "status": "In Progress" }
+          ]
+        }
+      ]
+    }
+  ]
+}
